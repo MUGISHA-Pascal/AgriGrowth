@@ -1,6 +1,10 @@
 import React from "react";
 import leafImage from "../assets/leaf2.png";
 import { BsFillArrowUpRightCircleFill } from "react-icons/bs";
+import { HiOutlineLightBulb } from "react-icons/hi2";
+import { SlSettings } from "react-icons/sl";
+import image from "../assets/image.jpeg";
+import { TbTargetArrow } from "react-icons/tb";
 const Homepage = () => {
   return (
     <div className="bg-[#102d11]">
@@ -35,7 +39,7 @@ const Homepage = () => {
       <section className="bg-[#102d11] flex flex-row  text-white">
         <div className="container mx-auto px-4 pt-20 text-center">
           <div className="flex pl-[90px]">
-            <h1 className="text-[60px] inline w-[700px]">
+            <h1 className="text-[60px] text-left inline w-[700px]">
               Welcome to the Future of Agriculture
             </h1>
             <button className="text-gray-300 w-[140px] space-x-[10px] items-center mt-[60px] flex flex-row">
@@ -43,7 +47,7 @@ const Homepage = () => {
               <BsFillArrowUpRightCircleFill className="w-[30px] h-[30px] text-[#CBE86A]" />
             </button>
           </div>
-          <div className="flex flex-row ml-[110px] space-x-[250px]">
+          <div className="flex flex-row ml-[100px] space-x-[250px]">
             <p className=" text-[14px] w-[500px] text-left mt-[50px]">
               Discover the cutting-edge world of agriculture where technology
               meets sustainability.Our mission is to revolutionilize farming for
@@ -58,34 +62,49 @@ const Homepage = () => {
         </div>
       </section>
 
-      <section className="highlight-bg">
-        <div className="bg-[#CBE86A] mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">
+      <section className="highlight-bg flex flex-row">
+        <img alt="image" src={image} className="h-[480px] w-[600px]" />
+        <div className="bg-[#CBE86A] px-4 w-full flex flex-col space-y-[40px] pl-[60px] items-start">
+          <h2 className="text-[25px] font-semibold text-center mt-[30px]">
             Modern and Futuristic Benefits
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+          <div className="flex flex-col text-center space-y-[30px]">
             <div>
-              <h3 className="text-xl font-semibold">Precision Farming</h3>
-              <p className="mt-2">
+              <div className="flex flex-row space-x-[10px] items-center">
+                <HiOutlineLightBulb className="w-[20px] h-[20px]" />
+                <h3 className="text-[17px] font-semibold">Precision Farming</h3>
+              </div>
+              <p className="mt-2 text-[14px] w-[460px] text-left ml-[30px]">
                 Enhance crop production through real-time monitoring and
                 efficient resource management.
               </p>
             </div>
             <div>
-              <h3 className="text-xl font-semibold">Sustainable Innovations</h3>
-              <p className="mt-2">
+              <div className="flex flex-row space-x-[10px] items-center">
+                <SlSettings className="w-[20px] h-[20px]" />
+                <h3 className="text-[17px] font-semibold">
+                  Sustainable Innovations
+                </h3>
+              </div>
+              <p className="mt-2 text-[14px] w-[460px] text-left ml-[30px]">
                 Implement eco-friendly farming methods to reduce waste and
                 increase sustainability.
               </p>
             </div>
             <div>
-              <h3 className="text-xl font-semibold">Smart Automation</h3>
-              <p className="mt-2">
+              <div className="flex flex-row space-x-[10px] items-center">
+                <TbTargetArrow className="w-[20px] h-[20px]" />
+                <h3 className="text-[17px] font-semibold">Smart Automation</h3>
+              </div>
+              <p className="mt-2 text-[14px] w-[460px] text-left ml-[30px]">
                 Utilize AI-driven automation to optimize farm operations and
                 labor.
               </p>
             </div>
           </div>
+          <p className="mt-2 text-[14px] w-[460px] text-left ml-[30px]">
+            learn more about what we are doing
+          </p>
         </div>
       </section>
 
