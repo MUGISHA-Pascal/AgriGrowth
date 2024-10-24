@@ -3,6 +3,8 @@ import leafImage from "../assets/leaf2.png";
 import { BsFillArrowUpRightCircleFill } from "react-icons/bs";
 import { HiOutlineLightBulb } from "react-icons/hi2";
 import { SlSettings } from "react-icons/sl";
+import { GiThreeLeaves } from "react-icons/gi";
+import { PiMedalLight } from "react-icons/pi";
 import image from "../assets/image.jpeg";
 import { TbTargetArrow } from "react-icons/tb";
 const Homepage = () => {
@@ -108,36 +110,44 @@ const Homepage = () => {
         </div>
       </section>
 
-      <section className="bg-white py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold">
-            Changing the World, One Small Farm at a Time
-          </h2>
-          <p className="mt-4">
-            Transform your farm using advanced tools and technologies.
+      <section className="py-20">
+        <div className="flex flex-col space-y-[20px] pl-[90px]">
+          <h1 className="text-[40px] text-white text-left inline w-[500px] leading-[50px]">
+            Enable Local Farmers Go Global
+          </h1>
+          <p className=" text-[14px] w-[500px] text-white text-left mt-[50px]">
+            By leveraging various existing Digital Technologies, Farm2Global is
+            a game changer verified platform within agri-sector supply chain. It
+            enhances trust and credibility within the agricultural sector, and
+            offers a worldwide reach, allowing bulk buyers to easily access and
+            connect with verified local farmers within the East African region
+            without intervention of middlemen in the process.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
-            <div>
-              <img
-                src="path-to-your-image.jpg"
-                alt="Drones"
-                className="w-full h-auto rounded-lg shadow-md"
-              />
-              <h3 className="text-xl font-semibold mt-4">Drones</h3>
-              <p>
-                Used for aerial surveillance, crop monitoring, and pesticide
-                application.
-              </p>
-            </div>
-            <div>
-              <img
-                src="path-to-your-image.jpg"
-                alt="IoT Sensors"
-                className="w-full h-auto rounded-lg shadow-md"
-              />
-              <h3 className="text-xl font-semibold mt-4">IoT Sensors</h3>
-              <p>Utilize real-time sensors to monitor farm metrics.</p>
-            </div>
+        </div>
+        <div className="flex flex-row space-x-[30px]">
+          <div className="flex flex-col items-center justify-center">
+            <GiThreeLeaves className="w-[80px] h-[80px] text-white" />
+            <h1 className="font-bold text-white text-[15px]">
+              100% Trusted Farmers
+            </h1>
+            <p className=" text-[12px] w-[200px] text-white text-left mt-[10px]">
+              Farmers registration process involved multiple steps including
+              Unique Digital ID issuance, Personal,Business and Administrative
+              documents verification and onsite visit to ensure their
+              credibility
+            </p>
+          </div>
+          <div className="flex flex-col">
+            <PiMedalLight />
+            <h1 className="font-bold text-white text-[20px]">
+              Awards and Recognition
+            </h1>
+            <p className=" text-[14px] w-[500px] text-white text-left mt-[50px]">
+              We have won various awards such as Digital ID For Africa where we
+              leveraged Digital ID to enhance digitization of Agriculture
+              sector. In addition, we are legally recognized by MINAGRI, RDB and
+              RCA
+            </p>
           </div>
         </div>
       </section>
