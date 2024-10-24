@@ -1,12 +1,13 @@
 import React from "react";
-
+import leafImage from "../assets/leaf2.png";
+import { BsFillArrowUpRightCircleFill } from "react-icons/bs";
 const Homepage = () => {
   return (
-    <div>
-      <nav className="bg-[#102d11] border-b-[1px] text-white py-4">
-        <div className="container mx-auto flex justify-between items-center">
-          <div className="text-2xl font-bold">AgriTech Advance</div>
-          <ul className="flex space-x-6">
+    <div className="bg-[#102d11]">
+      <nav className="bg-[#102d11] border-b-[1px] border-gray-400 mx-[50px] text-white py-4">
+        <div className="container mx-auto px-[70px] pt-[20px] flex justify-between items-center">
+          <div className="text-2xl font-semi-bold">Farmers2Global</div>
+          <ul className="flex space-x-6 font-normal text-gray-300">
             <li>
               <a href="#" className="hover:text-green-300">
                 About Us
@@ -31,23 +32,34 @@ const Homepage = () => {
         </div>
       </nav>
 
-      <section className="bg-[#102d11] text-white">
-        <div className="container mx-auto px-4 py-20 text-center">
-          <h1 className="text-5xl font-bold">
-            Welcome to the Future of Agriculture
-          </h1>
-          <p className="mt-4 text-xl">
-            Discover the cutting-edge world of agriculture where technology
-            meets sustainability.
-          </p>
-          <button className="mt-8 bg-green-500 px-6 py-3 rounded text-xl font-semibold hover:bg-green-600">
-            Learn More
-          </button>
+      <section className="bg-[#102d11] flex flex-row  text-white">
+        <div className="container mx-auto px-4 pt-20 text-center">
+          <div className="flex pl-[90px]">
+            <h1 className="text-[60px] inline w-[700px]">
+              Welcome to the Future of Agriculture
+            </h1>
+            <button className="text-gray-300 w-[140px] space-x-[10px] items-center mt-[60px] flex flex-row">
+              <p>Learn more</p>
+              <BsFillArrowUpRightCircleFill className="w-[30px] h-[30px] text-[#CBE86A]" />
+            </button>
+          </div>
+          <div className="flex flex-row ml-[110px] space-x-[250px]">
+            <p className=" text-[14px] w-[500px] text-left mt-[50px]">
+              Discover the cutting-edge world of agriculture where technology
+              meets sustainability.Our mission is to revolutionilize farming for
+              a brighter tomorrow.
+            </p>
+            <img
+              src={leafImage}
+              alt="leaf"
+              className="w-[300px] h-[180px] mt-[30px]"
+            />
+          </div>
         </div>
       </section>
 
-      <section className="highlight-bg py-20">
-        <div className="container mx-auto px-4">
+      <section className="highlight-bg">
+        <div className="bg-[#CBE86A] mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">
             Modern and Futuristic Benefits
           </h2>
