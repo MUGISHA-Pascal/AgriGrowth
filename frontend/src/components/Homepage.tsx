@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import leafImage from "../assets/leaf2.png";
 import { BsFillArrowUpRightCircleFill } from "react-icons/bs";
 import { HiOutlineLightBulb } from "react-icons/hi2";
@@ -17,11 +17,28 @@ import { RiTwitterXFill } from "react-icons/ri";
 import { BiSolidHappyAlt } from "react-icons/bi";
 import { FaRegCopyright } from "react-icons/fa6";
 import minimex from "../assets/minimex.png";
+import { GrPrevious } from "react-icons/gr";
 import monsalwa from "../assets/monsalwa.png";
 import azam from "../assets/azam.png";
 import africa from "../assets/africa.png";
 import adma from "../assets/adma.png";
+import coffee from "../assets/coffee.png";
+import cotton from "../assets/cotton.png";
+import fruits from "../assets/fruits.png";
+import maize from "../assets/maize.png";
+import { GrNext } from "react-icons/gr";
+import rice from "../assets/rice.png";
+import wheat from "../assets/wheat.png";
 const Homepage = () => {
+  const [currentState, setCurrentState] = useState(0);
+  const slides = [
+    { image: coffee, name: "coffee" },
+    { image: cotton, name: "cotton" },
+    { image: fruits, name: "fruits" },
+    { image: maize, name: "maize" },
+    { image: rice, name: "rice" },
+    { image: wheat, name: "wheat" },
+  ];
   return (
     <div className="bg-[#102d11]">
       <nav className="bg-[#102d11] border-b-[1px] border-gray-400 mx-[50px] text-white py-4">
@@ -78,8 +95,16 @@ const Homepage = () => {
         </div>
       </section>
 
-      <section className="highlight-bg flex flex-row">
-        <img alt="image" src={image} className="h-[480px] w-[600px]" />
+      <section className="bg-[#CBE86A] flex flex-rowbg-[#CBE86A]">
+        <div className="h-[480px] w-[1400px] relative">
+          <img
+            alt="image"
+            src={slides[currentState].image}
+            className="h-[480px] w-[700px] absolute"
+          />
+          <GrPrevious className="absolute text-[#CBE86A] top-[210px] left-[10px] text-[30px]" />
+          <GrNext className="absolute text-[#CBE86A] text-[30px] top-[210px] right-[10px]" />
+        </div>
         <div className="bg-[#CBE86A] px-4 w-full flex flex-col space-y-[40px] pl-[60px] items-start">
           <h2 className="text-[25px] font-semibold text-center mt-[30px]">
             Modern and Futuristic Benefits
@@ -178,7 +203,7 @@ const Homepage = () => {
             </div>
           </div>
           <div className="flex flex-col space-y-[70px] items-center justify-center">
-            <div className="flex flex-row space-x-[15px] items-center justify-center">
+            <div className="flex flex-row space-x-[24px] items-center justify-center">
               <div className="bg-[#CBE86A] w-[4px] h-[220px] rounded-full"></div>
               <div className="flex flex-col items-center justify-center">
                 <GiThreeLeaves className="w-[80px] h-[80px] text-white" />
@@ -193,7 +218,7 @@ const Homepage = () => {
                 </p>
               </div>
             </div>
-            <div className="flex flex-row space-x-[15px] items-center justify-center">
+            <div className="flex flex-row space-x-[24px] items-center justify-center">
               <div className="bg-[#CBE86A] w-[4px] h-[220px] rounded-full"></div>
               <div className="flex flex-col items-center justify-center">
                 <PiMedalLight className="w-[80px] h-[80px] text-white" />
@@ -289,7 +314,7 @@ const Homepage = () => {
               id="email"
               className="focus:outline-none placeholder:text-gray-500 text-gray-400 placeholder:text-[12px] text-[12px] ml-[30px] w-[345px] h-[42px] bg-gray-700"
             />
-            <button className="bg-[#CBE86A] font-bold w-[70px] rounded-full text-white text-[12px] h-[35px]">
+            <button className="bg-[#CBE86A] font-bold w-[70px] rounded-full hover:opacity-60 text-white text-[12px] h-[35px]">
               Submit
             </button>
           </div>
