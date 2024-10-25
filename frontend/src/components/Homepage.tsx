@@ -16,6 +16,11 @@ import { PiWhatsappLogoLight } from "react-icons/pi";
 import { RiTwitterXFill } from "react-icons/ri";
 import { BiSolidHappyAlt } from "react-icons/bi";
 import { FaRegCopyright } from "react-icons/fa6";
+import minimex from "../assets/minimex.png";
+import monsalwa from "../assets/monsalwa.png";
+import azam from "../assets/azam.png";
+import africa from "../assets/africa.png";
+import adma from "../assets/adma.png";
 const Homepage = () => {
   return (
     <div className="bg-[#102d11]">
@@ -206,7 +211,24 @@ const Homepage = () => {
           </div>
         </div>
       </section>
-      <footer className="flex flex-row space-x-[70px] pl-[100px] pb-[40px]">
+      <section className="bg-[#CBE86A] flex flex-col space-y-[30px] py-[70px] px-[100px]">
+        <div className="flex flex-col space-y-[20px]">
+          <h1 className="text-[40px] text-black text-left inline w-[500px] leading-[50px]">
+            Our Partners
+          </h1>
+          <p className=" text-[14px] w-[500px] text-black text-left mt-[50px]">
+            Connecting East African local farmers with potential Buyers.
+          </p>
+        </div>
+        <div className="flex flex-row space-x-[100px] items-center">
+          <img src={adma} alt="adma" className="w-[100px] h-auto" />
+          <img src={africa} alt="africa" className="w-[100px] h-auto" />
+          <img src={azam} alt="azam" className="w-[100px] h-auto" />
+          <img src={monsalwa} alt="monsalwa" className="w-[100px] h-auto" />
+          <img src={minimex} alt="minimex" className="w-auto h-[60px]" />
+        </div>
+      </section>
+      <footer className="flex flex-row space-x-[70px] pl-[100px] pb-[40px] pt-[30px]">
         <div className="flex flex-col space-y-[30px]">
           <div className="flex flex-col space-y-0">
             <h1 className="text-[20px] font-semibold text-white text-left inline w-[500px] leading-[50px]">
