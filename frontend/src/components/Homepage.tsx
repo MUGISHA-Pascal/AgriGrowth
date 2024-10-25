@@ -5,7 +5,7 @@ import { HiOutlineLightBulb } from "react-icons/hi2";
 import { SlSettings } from "react-icons/sl";
 import { GiThreeLeaves } from "react-icons/gi";
 import { PiMedalLight } from "react-icons/pi";
-import image from "../assets/image.jpeg";
+import { GoArrowUpRight } from "react-icons/go";
 import { TbTargetArrow } from "react-icons/tb";
 import { MdStars } from "react-icons/md";
 import { IoIosPeople } from "react-icons/io";
@@ -32,18 +32,30 @@ import wheat from "../assets/wheat.png";
 const Homepage = () => {
   const [currentState, setCurrentState] = useState(0);
   const slides = [
-    { image: coffee, name: "coffee" },
-    { image: cotton, name: "cotton" },
-    { image: fruits, name: "fruits" },
-    { image: maize, name: "maize" },
-    { image: rice, name: "rice" },
-    { image: wheat, name: "wheat" },
+    { image: coffee, name: "Coffee farmers" },
+    { image: cotton, name: "Cotton farmers" },
+    { image: fruits, name: "Fruits farmers" },
+    { image: maize, name: "Maize farmers" },
+    { image: rice, name: "Rice farmers" },
+    { image: wheat, name: "Wheat farmers" },
   ];
+  const Next = () => {
+    setCurrentState((prevstate) =>
+      prevstate === slides.length - 1 ? 0 : prevstate + 1
+    );
+  };
+  const Previous = () => {
+    setCurrentState((prevstate) =>
+      prevstate === 0 ? slides.length - 1 : prevstate - 1
+    );
+  };
   return (
     <div className="bg-[#102d11]">
       <nav className="bg-[#102d11] border-b-[1px] border-gray-400 mx-[50px] text-white py-4">
         <div className="container mx-auto px-[70px] pt-[20px] flex justify-between items-center">
-          <div className="text-2xl font-semi-bold">Farmers2Global</div>
+          <div className="text-2xl font-semi-bold text-white">
+            Farmers2Global
+          </div>
           <ul className="flex space-x-6 font-normal text-gray-300">
             <li>
               <a href="#" className="hover:text-green-300">
@@ -77,7 +89,7 @@ const Homepage = () => {
             </h1>
             <button className="text-gray-300 w-[140px] space-x-[10px] items-center mt-[60px] flex flex-row">
               <p>Learn more</p>
-              <BsFillArrowUpRightCircleFill className="w-[30px] h-[30px] text-[#CBE86A]" />
+              <BsFillArrowUpRightCircleFill className="w-[30px] hover:opacity-60 h-[30px] text-[#CBE86A]" />
             </button>
           </div>
           <div className="flex flex-row ml-[100px] space-x-[250px]">
@@ -100,10 +112,31 @@ const Homepage = () => {
           <img
             alt="image"
             src={slides[currentState].image}
-            className="h-[480px] w-[700px] absolute"
+            className={`h-[480px] w-[700px] absolute bg-url(${slides[currentState].image})`}
           />
-          <GrPrevious className="absolute text-[#CBE86A] top-[210px] left-[10px] text-[30px]" />
-          <GrNext className="absolute text-[#CBE86A] text-[30px] top-[210px] right-[10px]" />
+          <GrPrevious
+            onClick={Previous}
+            className="absolute text-[#CBE86A] top-[190px] left-[10px] text-[30px] hover:cursor-pointer"
+          />
+          <GrNext
+            onClick={Next}
+            className="absolute text-[#CBE86A] text-[30px] top-[190px] right-[10px] hover:cursor-pointer"
+          />
+          <div className="absolute space-x-[17px] bg-[#102d11] w-[330px] h-[150px] bottom-[10px] left-[170px] items-center flex flex-row pl-[10px] rounded-[15px]">
+            <div className="bg-[#CBE86A] w-[4px] h-[120px] rounded-full"></div>
+            <div className="flex flex-col">
+              <h2 className="font-bold text-white text-[20px]">
+                Farmers2Global
+              </h2>
+              <h2 className="font-bold text-white text-[15px]">
+                {slides[currentState].name}
+              </h2>
+            </div>
+            <button className="border-[1px] border-[#CBE86A] font-bold flex flex-row justify-center items-center hover:bg-[#CBE86A] hover:bg-opacity-20 space-x-[3px] text-[#CBE86A] w-[100px] p-[4px] rounded-full">
+              <p>Explore</p>
+              <GoArrowUpRight />
+            </button>
+          </div>
         </div>
         <div className="bg-[#CBE86A] px-4 w-full flex flex-col space-y-[40px] pl-[60px] items-start">
           <h2 className="text-[25px] font-semibold text-center mt-[30px]">
@@ -314,7 +347,7 @@ const Homepage = () => {
               id="email"
               className="focus:outline-none placeholder:text-gray-500 text-gray-400 placeholder:text-[12px] text-[12px] ml-[30px] w-[345px] h-[42px] bg-gray-700"
             />
-            <button className="bg-[#CBE86A] font-bold w-[70px] rounded-full hover:opacity-60 text-white text-[12px] h-[35px]">
+            <button className="bg-[#CBE86A] font-bold w-[70px] rounded-full hover:bg-opacity-80 text-[#102d11] hover:border-[#102d11] hover:border-[1px] text-[12px] h-[35px]">
               Submit
             </button>
           </div>

@@ -5,7 +5,7 @@ import Homepage from "./components/Homepage";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App overflow-hidden">
       <Homepage />
     </div>
   );
