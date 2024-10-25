@@ -7,6 +7,9 @@ import { GiThreeLeaves } from "react-icons/gi";
 import { PiMedalLight } from "react-icons/pi";
 import image from "../assets/image.jpeg";
 import { TbTargetArrow } from "react-icons/tb";
+import { MdStars } from "react-icons/md";
+import { IoIosPeople } from "react-icons/io";
+import { BiSolidHappyAlt } from "react-icons/bi";
 const Homepage = () => {
   return (
     <div className="bg-[#102d11]">
@@ -111,48 +114,94 @@ const Homepage = () => {
       </section>
 
       <section className="py-20">
-        <div className="flex flex-col space-y-[20px] pl-[90px]">
-          <h1 className="text-[40px] text-white text-left inline w-[500px] leading-[50px]">
-            Enable Local Farmers Go Global
-          </h1>
-          <p className=" text-[14px] w-[500px] text-white text-left mt-[50px]">
-            By leveraging various existing Digital Technologies, Farm2Global is
-            a game changer verified platform within agri-sector supply chain. It
-            enhances trust and credibility within the agricultural sector, and
-            offers a worldwide reach, allowing bulk buyers to easily access and
-            connect with verified local farmers within the East African region
-            without intervention of middlemen in the process.
-          </p>
-        </div>
-        <div className="flex flex-row space-x-[30px]">
-          <div className="flex flex-col items-center justify-center">
-            <GiThreeLeaves className="w-[80px] h-[80px] text-white" />
-            <h1 className="font-bold text-white text-[15px]">
-              100% Trusted Farmers
-            </h1>
-            <p className=" text-[12px] w-[200px] text-white text-left mt-[10px]">
-              Farmers registration process involved multiple steps including
-              Unique Digital ID issuance, Personal,Business and Administrative
-              documents verification and onsite visit to ensure their
-              credibility
-            </p>
+        <div className="flex flex-row space-x-[200px]">
+          <div className="flex flex-col space-y-[70px] pl-[150px]">
+            <div className="flex flex-col space-y-[20px]">
+              <h1 className="text-[40px] text-white text-left inline w-[500px] leading-[50px]">
+                Enable Local Farmers Go Global
+              </h1>
+              <p className=" text-[14px] w-[500px] text-white text-left mt-[50px]">
+                By leveraging various existing Digital Technologies, Farm2Global
+                is a game changer verified platform within agri-sector supply
+                chain. It enhances trust and credibility within the agricultural
+                sector, and offers a worldwide reach, allowing bulk buyers to
+                easily access and connect with verified local farmers within the
+                East African region without intervention of middlemen in the
+                process.
+              </p>
+            </div>
+            <div className="flex-col space-y-[20px] flex">
+              <div className="flex flex-row w-[430px] items-center justify-start border-[#CBE86A] border-b-[1px]">
+                <div className="flex flex-row space-x-[10px]">
+                  <MdStars className="text-[#CBE86A] w-[24px] h-[24px]" />
+                  <h1 className="font-semibold text-[17px] text-white">
+                    Our customers
+                  </h1>
+                </div>
+                <p className="font-bold text-white text-[30px] ml-[150px]">
+                  1230
+                </p>
+              </div>
+              <div className="flex flex-row w-[430px] items-center justify-start border-[#CBE86A] border-b-[1px]">
+                <div className="flex flex-row space-x-[10px]">
+                  <IoIosPeople className="text-[#CBE86A] w-[24px] h-[24px]" />
+                  <h1 className="font-semibold text-[17px] text-white">
+                    Farmers Cooperatives
+                  </h1>
+                </div>
+                <p className="font-bold text-white text-[30px]  ml-[85px]">
+                  994
+                </p>
+              </div>
+              <div className="flex flex-row w-[430px] items-center justify-start border-[#CBE86A] border-b-[1px]">
+                <div className="flex flex-row space-x-[10px]">
+                  <BiSolidHappyAlt className="text-[#CBE86A] w-[24px] h-[24px]" />
+                  <h1 className="font-semibold text-[17px] text-white">
+                    Happy Clients{" "}
+                  </h1>
+                </div>
+                <p className="font-bold text-white text-[30px]  ml-[155px]">
+                  932
+                </p>
+              </div>
+            </div>
           </div>
-          <div className="flex flex-col">
-            <PiMedalLight />
-            <h1 className="font-bold text-white text-[20px]">
-              Awards and Recognition
-            </h1>
-            <p className=" text-[14px] w-[500px] text-white text-left mt-[50px]">
-              We have won various awards such as Digital ID For Africa where we
-              leveraged Digital ID to enhance digitization of Agriculture
-              sector. In addition, we are legally recognized by MINAGRI, RDB and
-              RCA
-            </p>
+          <div className="flex flex-col space-y-[70px] items-center justify-center">
+            <div className="flex flex-row space-x-[15px] items-center justify-center">
+              <div className="bg-[#CBE86A] w-[4px] h-[220px] rounded-full"></div>
+              <div className="flex flex-col items-center justify-center">
+                <GiThreeLeaves className="w-[80px] h-[80px] text-white" />
+                <h1 className="font-bold text-white text-[15px]">
+                  100% Trusted Farmers
+                </h1>
+                <p className=" text-[12px] w-[200px] text-white text-left mt-[10px]">
+                  Farmers registration process involved multiple steps including
+                  Unique Digital ID issuance, Personal,Business and
+                  Administrative documents verification and onsite visit to
+                  ensure their credibility
+                </p>
+              </div>
+            </div>
+            <div className="flex flex-row space-x-[15px] items-center justify-center">
+              <div className="bg-[#CBE86A] w-[4px] h-[220px] rounded-full"></div>
+              <div className="flex flex-col items-center justify-center">
+                <PiMedalLight className="w-[80px] h-[80px] text-white" />
+                <h1 className="font-bold text-white text-[15px]">
+                  Awards and Recognition
+                </h1>
+                <p className=" text-[12px] w-[200px] text-white text-left mt-[10px]">
+                  We have won various awards such as Digital ID For Africa where
+                  we leveraged Digital ID to enhance digitization of Agriculture
+                  sector. In addition, we are legally recognized by MINAGRI, RDB
+                  and RCA
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="hero-bg py-20 text-white text-center">
+      <section className="bg-[#CBE86A] py-20 text-white text-center">
         <h2 className="text-3xl font-bold">Join Us Now</h2>
         <p className="mt-4">Become part of the agricultural revolution!</p>
         <button className="mt-8 bg-green-500 px-6 py-3 rounded text-xl font-semibold hover:bg-green-600">
