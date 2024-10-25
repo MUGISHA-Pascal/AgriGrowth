@@ -9,7 +9,13 @@ import image from "../assets/image.jpeg";
 import { TbTargetArrow } from "react-icons/tb";
 import { MdStars } from "react-icons/md";
 import { IoIosPeople } from "react-icons/io";
+import { MdOutlineMailOutline } from "react-icons/md";
+import { BiPhoneCall } from "react-icons/bi";
+import { TbBrandFacebook } from "react-icons/tb";
+import { PiWhatsappLogoLight } from "react-icons/pi";
+import { RiTwitterXFill } from "react-icons/ri";
 import { BiSolidHappyAlt } from "react-icons/bi";
+import { FaRegCopyright } from "react-icons/fa6";
 const Homepage = () => {
   return (
     <div className="bg-[#102d11]">
@@ -200,20 +206,87 @@ const Homepage = () => {
           </div>
         </div>
       </section>
+      <footer className="flex flex-row space-x-[70px] pl-[100px] pb-[40px]">
+        <div className="flex flex-col space-y-[30px]">
+          <div className="flex flex-col space-y-0">
+            <h1 className="text-[20px] font-semibold text-white text-left inline w-[500px] leading-[50px]">
+              Farmers2Global Advance
+            </h1>
+            <p className=" text-[12px] w-[450px] text-white text-left">
+              Discover the cutting-edge World of agriculture where technology
+              meets sustainability. Our mission is to revolutionilize farming
+              for a brighter tomorrow
+            </p>
+          </div>
+          <div className="flex flex-row space-x-[70px]">
+            <div className="flex flex-row space-x-[10px] items-center">
+              <BiPhoneCall className="bg-gray-700 p-[7px] shadow-md text-[30px] rounded-full text-white" />
+              <div className="flex flex-col items-start">
+                <p className="text-[10px] text-gray-400">Have a question ?</p>
+                <p className="font-semibold text-[12px] text-white">
+                  +(250)78-225-6907
+                </p>
+              </div>
+            </div>
+            <div className="flex flex-row space-x-[10px] items-center">
+              <MdOutlineMailOutline className="bg-gray-700 p-[7px] shadow-md text-[30px] rounded-full text-white" />
+              <div className="flex flex-col items-start">
+                <p className="text-[10px] text-gray-400">Contact us at ?</p>
+                <p className="font-semibold text-[12px] text-white">
+                  farmz2global@gmail.com
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-row pt-[20px] space-x-[30px] text-[12px] text-gray-400">
+            <a href="#">About</a>
+            <a href="#">Contact</a>
 
-      <section className="bg-[#CBE86A] py-20 text-white text-center">
-        <h2 className="text-3xl font-bold">Join Us Now</h2>
-        <p className="mt-4">Become part of the agricultural revolution!</p>
-        <button className="mt-8 bg-green-500 px-6 py-3 rounded text-xl font-semibold hover:bg-green-600">
-          Sign Up
-        </button>
-      </section>
+            <a href="#">Privacy policy</a>
 
-      <footer className="bg-gray-800 text-white py-12">
-        <div className="container mx-auto px-4 text-center">
-          <p>Follow Us on Social Media</p>
-          <div className="mt-4"></div>
-          <p className="mt-8">© 2024 AgriTech Advance. All rights reserved.</p>
+            <a href="#">Sitemap</a>
+
+            <a href="#">Terms of use</a>
+          </div>
+        </div>
+        <div className="flex flex-col space-y-[20px] mt-[16px]">
+          <div className="flex flex-col space-y-[12px] items-start">
+            <h1 className="font-semibold text-[15px] text-white">Newsletter</h1>
+            <p className="text-[10px] text-gray-400 text-left w-[400px]">
+              Be the first one to know about discounts , offers and events ,
+              Unsubscribe whenever you like
+            </p>
+          </div>
+          <div className="bg-gray-700 items-center  relative w-[450px] h-[42px] rounded-full flex flex-row p-0">
+            <label htmlFor="email" className="absolute top-[12px] left-[7px]">
+              <MdOutlineMailOutline className="text-gray-500 text-[18px]" />
+            </label>
+            <input
+              type="text"
+              placeholder="Enter your email"
+              id="email"
+              className="focus:outline-none placeholder:text-gray-500 text-gray-400 placeholder:text-[12px] text-[12px] ml-[30px] w-[345px] h-[42px] bg-gray-700"
+            />
+            <button className="bg-[#CBE86A] font-bold w-[70px] rounded-full text-white text-[12px] h-[35px]">
+              Submit
+            </button>
+          </div>
+          <div className="flex flex-row space-x-[30px]">
+            <p className="font-semibold text-[13px] mt-[5px] text-white">
+              Follow us on social media
+            </p>
+            <div className="flex flex-col space-y-[20px]">
+              <div className="flex flex-row space-x-[9px]">
+                <TbBrandFacebook className="bg-gray-700 p-[7px] shadow-md text-[30px] rounded-full text-white" />
+                <PiWhatsappLogoLight className="bg-gray-700 p-[7px] shadow-md text-[30px] rounded-full text-white" />
+                <RiTwitterXFill className="bg-gray-700 p-[7px] shadow-md text-[30px] rounded-full text-white" />
+              </div>
+              <div className="text-[10px] text-gray-400 text-left flex flex-row items-center space-x-2 pt-[10px]">
+                <FaRegCopyright />
+                <p> 2024 , All rights reserved</p>
+              </div>
+            </div>
+          </div>
         </div>
       </footer>
     </div>
