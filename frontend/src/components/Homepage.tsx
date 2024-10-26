@@ -29,7 +29,10 @@ import maize from "../assets/maize.png";
 import { GrNext } from "react-icons/gr";
 import rice from "../assets/rice.png";
 import wheat from "../assets/wheat.png";
+import { CiMenuBurger } from "react-icons/ci";
+import { VscChromeClose } from "react-icons/vsc";
 const Homepage = () => {
+  const [navShow, setNavShow] = useState(false);
   const [currentState, setCurrentState] = useState(0);
   const slides = [
     { image: coffee, name: "Coffee farmers" },
@@ -52,11 +55,49 @@ const Homepage = () => {
   return (
     <div className="bg-[#102d11]">
       <nav className="bg-[#102d11] border-b-[1px] border-gray-400 mx-[50px] text-white py-4">
-        <div className="container mx-auto px-[70px] pt-[20px] flex justify-between items-center">
-          <div className="text-2xl font-semi-bold text-white">
+        <div className="container max-md:px-[10px] mx-auto  px-[70px] pt-[20px] flex justify-between items-center">
+          <div className="text-2xl max-sm:text-[13px] max-md:text-[15px] max-md:font-bold font-semi-bold text-white">
             Farmers2Global
           </div>
-          <ul className="flex space-x-6 font-normal text-gray-300">
+          <CiMenuBurger
+            className="md-hidden"
+            onClick={() => {
+              setNavShow(true);
+            }}
+          />
+          {navShow && (
+            <div className="flex flex-col absolute items-end z-10 border-[1px] border-gray-300 p-[10px] top-[15px] bg-[#102d11]">
+              <VscChromeClose
+                className=""
+                onClick={() => {
+                  setNavShow(false);
+                }}
+              />
+              <ul className="flex space-x-6 items-center w-full flex-col space-y-[10px] font-normal text-[12px] text-gray-300">
+                <li>
+                  <a href="#" className="hover:text-green-300">
+                    About Us
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-green-300">
+                    Technology
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-green-300">
+                    Sustainability
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-green-300">
+                    Contact
+                  </a>
+                </li>
+              </ul>
+            </div>
+          )}
+          <ul className="flex space-x-6 max-md:hidden font-normal text-gray-300">
             <li>
               <a href="#" className="hover:text-green-300">
                 About Us
