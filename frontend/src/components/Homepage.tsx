@@ -148,76 +148,81 @@ const Homepage = () => {
         </div>
       </section>
 
-      <section className="bg-[#CBE86A] flex flex-rowbg-[#CBE86A]">
-        <div className="h-[480px] w-[1400px] relative">
+      <section className="bg-[#CBE86A] flex flex-row max-md:flex-col max-md:pb-[10px]">
+        <div className="h-[480px] w-[1400px] max-md:w-full max-md:h-[300px] relative">
           <img
             alt="image"
             src={slides[currentState].image}
-            className={`h-[480px] w-[700px] absolute bg-url(${slides[currentState].image})`}
+            className={`h-[480px] w-[700px] max-md:h-[300px] absolute bg-url(${slides[currentState].image})`}
           />
           <GrPrevious
             onClick={Previous}
-            className="absolute text-[#CBE86A] top-[190px] left-[10px] text-[30px] hover:cursor-pointer"
+            className="absolute text-[#CBE86A] max-md:top-[90px] top-[190px] left-[10px] text-[30px] hover:cursor-pointer"
           />
           <GrNext
             onClick={Next}
-            className="absolute text-[#CBE86A] text-[30px] top-[190px] right-[10px] hover:cursor-pointer"
+            className="absolute text-[#CBE86A] text-[30px] max-md:top-[90px] top-[190px] right-[10px] hover:cursor-pointer"
           />
-          <div className="absolute space-x-[17px] bg-[#102d11] w-[330px] h-[150px] bottom-[10px] left-[170px] items-center flex flex-row pl-[10px] rounded-[15px]">
-            <div className="bg-[#CBE86A] w-[4px] h-[120px] rounded-full"></div>
+          <div className="absolute space-x-[17px] max-md:space-x-[14px]  bg-[#102d11] max-md:w-[250px] max-md:h-[100px] w-[330px] h-[150px] bottom-[10px] max-md:bottom-[10px] left-[170px] max-sm:left-[120px] items-center flex flex-row pl-[10px] rounded-[15px]">
+            <div className="bg-[#CBE86A] w-[4px] h-[120px] max-md:h-[75px] max-md:w-[2px] rounded-full"></div>
             <div className="flex flex-col">
-              <h2 className="font-bold text-white text-[20px]">
+              <h2 className="font-bold text-white max-md:text-[14px] text-[20px]">
                 Farmers2Global
               </h2>
-              <h2 className="font-bold text-white text-[15px]">
+              <h2 className="font-bold text-white text-[15px] max-md:text-[12px]">
                 {slides[currentState].name}
               </h2>
             </div>
-            <button className="border-[1px] border-[#CBE86A] font-bold flex flex-row justify-center items-center hover:bg-[#CBE86A] hover:bg-opacity-20 space-x-[3px] text-[#CBE86A] w-[100px] p-[4px] rounded-full">
+            <button className="border-[1px] border-[#CBE86A] font-bold flex flex-row justify-center items-center hover:bg-[#CBE86A] hover:bg-opacity-20 space-x-[3px] max-md:text-[12px] max-md:w-[75px] text-[#CBE86A] w-[100px] p-[4px] max-md:p-[3px] rounded-full">
               <p>Explore</p>
               <GoArrowUpRight />
             </button>
           </div>
         </div>
-        <div className="bg-[#CBE86A] px-4 w-full flex flex-col space-y-[40px] pl-[60px] items-start">
-          <h2 className="text-[25px] font-semibold text-center mt-[30px]">
+        <div className="bg-[#CBE86A] px-4 w-full flex flex-col space-y-[40px] pl-[60px] max-md:pl-0 items-start max-md:items-center">
+          <h2 className="text-[25px] font-semibold text-center mt-[30px] max-sm:text-[17px] max-md:mt-[20px]">
             Modern and Futuristic Benefits
           </h2>
           <div className="flex flex-col text-center space-y-[30px]">
             <div>
               <div className="flex flex-row space-x-[10px] items-center">
-                <HiOutlineLightBulb className="w-[20px] h-[20px]" />
-                <h3 className="text-[17px] font-semibold">Precision Farming</h3>
+                <HiOutlineLightBulb className="w-[20px] h-[20px] max-md:h-[13px] max-md:w-[13px] " />
+                <h3 className="text-[17px] font-semibold max-md:text-[13px]">
+                  Precision Farming
+                </h3>
               </div>
-              <p className="mt-2 text-[14px] w-[460px] text-left ml-[30px]">
+              <p className="mt-2 text-[14px] max-md:text-[10px] max-md:w-[260px] w-[460px] text-left ml-[30px]">
                 Enhance crop production through real-time monitoring and
                 efficient resource management.
               </p>
             </div>
             <div>
               <div className="flex flex-row space-x-[10px] items-center">
-                <SlSettings className="w-[20px] h-[20px]" />
-                <h3 className="text-[17px] font-semibold">
+                <SlSettings className="w-[20px] h-[20px] max-md:h-[13px] max-md:w-[13px]" />
+                <h3 className="text-[17px] font-semibold max-md:text-[13px]">
                   Sustainable Innovations
                 </h3>
               </div>
-              <p className="mt-2 text-[14px] w-[460px] text-left ml-[30px]">
+              <p className="mt-2 text-[14px] w-[460px] max-md:text-[10px] max-md:w-[260px] text-left ml-[30px]">
                 Implement eco-friendly farming methods to reduce waste and
                 increase sustainability.
               </p>
             </div>
             <div>
               <div className="flex flex-row space-x-[10px] items-center">
-                <TbTargetArrow className="w-[20px] h-[20px]" />
-                <h3 className="text-[17px] font-semibold">Smart Automation</h3>
+                <TbTargetArrow className="w-[20px] h-[20px] max-md:h-[13px] max-md:w-[13px]" />
+                <h3 className="text-[17px] font-semibold max-md:text-[13px]">
+                  Smart Automation
+                </h3>
               </div>
-              <p className="mt-2 text-[14px] w-[460px] text-left ml-[30px]">
+              <p className="mt-2 text-[14px] w-[460px] max-md:text-[10px] max-md:w-[260px] text-left ml-[30px]">
                 Utilize AI-driven automation to optimize farm operations and
                 labor.
               </p>
             </div>
           </div>
-          <p className="mt-2 text-[14px] w-[460px] text-left ml-[30px]">
+
+          <p className="mt-2 text-[14px] w-[460px] max-md:text-[10px] max-md:ml-[140px] text-left ml-[30px]">
             learn more about what we are doing
           </p>
         </div>
