@@ -60,20 +60,20 @@ const Homepage = () => {
             Farmers2Global
           </div>
           <CiMenuBurger
-            className="md-hidden"
+            className="max-md:flex hidden"
             onClick={() => {
               setNavShow(true);
             }}
           />
           {navShow && (
-            <div className="flex flex-col absolute items-end z-10 border-[1px] border-gray-300 p-[10px] top-[15px] bg-[#102d11]">
+            <div className="flex flex-col space-y-[10px] w-[150px] rounded-[10px] right-[10px] absolute items-end z-10 border-[1px] border-gray-300 p-[16px] top-[40px] bg-[#102d11]">
               <VscChromeClose
-                className=""
+                className="hover:bg-green-300"
                 onClick={() => {
                   setNavShow(false);
                 }}
               />
-              <ul className="flex space-x-6 items-center w-full flex-col space-y-[10px] font-normal text-[12px] text-gray-300">
+              <ul className="flex space-x-[10px] items-center w-full flex-col space-y-[10px] font-normal text-[12px] text-gray-300">
                 <li>
                   <a href="#" className="hover:text-green-300">
                     About Us
@@ -123,18 +123,18 @@ const Homepage = () => {
       </nav>
 
       <section className="bg-[#102d11] flex flex-row  text-white">
-        <div className="container mx-auto px-4 pt-20 text-center">
-          <div className="flex pl-[90px]">
-            <h1 className="text-[60px] text-left inline w-[700px]">
+        <div className="container mx-auto px-4 pt-20 max-md:pt-[40px] text-center">
+          <div className="flex pl-[90px] max-md:pl-[20px]">
+            <h1 className="text-[60px] text-left inline w-[700px] max-md:w-[300px] max-md:text-[30px]">
               Welcome to the Future of Agriculture
             </h1>
-            <button className="text-gray-300 w-[140px] space-x-[10px] items-center mt-[60px] flex flex-row">
+            <button className="text-gray-300 max-md:text-[10px] w-[140px] space-x-[10px] items-center mt-[60px] flex flex-row">
               <p>Learn more</p>
-              <BsFillArrowUpRightCircleFill className="w-[30px] hover:opacity-60 h-[30px] text-[#CBE86A]" />
+              <BsFillArrowUpRightCircleFill className="w-[30px] hover:opacity-60 h-[30px] max-md:w-[20px] max-md:h-[20px] text-[#CBE86A]" />
             </button>
           </div>
-          <div className="flex flex-row ml-[100px] space-x-[250px]">
-            <p className=" text-[14px] w-[500px] text-left mt-[50px]">
+          <div className="flex flex-row ml-[100px] max-sm:space-x-[50px] max-md:space-x-[120px] max-md:ml-[20px] space-x-[250px]">
+            <p className=" text-[14px] max-md:text-[10px] max-md:w-[300px] w-[500px] text-left max-md:mt-[30px] mt-[50px]">
               Discover the cutting-edge world of agriculture where technology
               meets sustainability.Our mission is to revolutionilize farming for
               a brighter tomorrow.
@@ -142,7 +142,7 @@ const Homepage = () => {
             <img
               src={leafImage}
               alt="leaf"
-              className="w-[300px] h-[180px] mt-[30px]"
+              className="w-[300px] h-[180px] mt-[30px] max-sm:mt-[80px] max-md:h-[75px] max-md:w-[130px] max-sm:w-[100px] max-sm:h-[55px]"
             />
           </div>
         </div>
