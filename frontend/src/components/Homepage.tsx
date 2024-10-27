@@ -315,56 +315,80 @@ const Homepage = () => {
           </div>
         </div>
       </section>
-      <section className="bg-[#CBE86A] flex flex-col space-y-[30px] py-[70px] px-[100px]">
-        <div className="flex flex-col space-y-[20px]">
-          <h1 className="text-[40px] text-black text-left inline w-[500px] leading-[50px]">
+      <section className="bg-[#CBE86A] flex flex-col space-y-[30px] md:py-[70px] max-md:py-[30px] md:px-[100px] max-md:items-center">
+        <div className="flex flex-col space-y-[14px] md:space-y-[7px]">
+          <h1 className="text-[40px] text-black text-left inline max-md:text-[17px] font-semibold">
             Our Partners
           </h1>
-          <p className=" text-[14px] w-[500px] text-black text-left mt-[50px]">
+          <p className=" text-[14px] text-black text-left mt-[50px] max-md:text-[10px] ">
             Connecting East African local farmers with potential Buyers.
           </p>
         </div>
-        <div className="flex flex-row space-x-[100px] items-center">
-          <img src={adma} alt="adma" className="w-[100px] h-auto" />
-          <img src={africa} alt="africa" className="w-[100px] h-auto" />
-          <img src={azam} alt="azam" className="w-[100px] h-auto" />
-          <img src={monsalwa} alt="monsalwa" className="w-[100px] h-auto" />
-          <img src={minimex} alt="minimex" className="w-auto h-[60px]" />
+        <div className="md:flex md:flex-row md:space-x-[100px] max-md:grid max-md:grid-cols-5 max-md:gap-2 items-center">
+          <img
+            src={adma}
+            alt="adma"
+            className="w-[100px] h-auto max-md:w-[70px]"
+          />
+          <img
+            src={africa}
+            alt="africa"
+            className="w-[100px] max-md:w-[70px] h-auto"
+          />
+          <img
+            src={azam}
+            alt="azam"
+            className="w-[100px] h-auto max-md:w-[70px]"
+          />
+          <img
+            src={monsalwa}
+            alt="monsalwa"
+            className="w-[100px] h-auto max-md:w-[70px]"
+          />
+          <img
+            src={minimex}
+            alt="minimex"
+            className="w-auto h-[60px] max-md:w-[70px] max-md:h-auto"
+          />
         </div>
       </section>
-      <footer className="flex flex-row space-x-[70px] pl-[100px] pb-[40px] pt-[30px]">
-        <div className="flex flex-col space-y-[30px]">
-          <div className="flex flex-col space-y-0">
-            <h1 className="text-[20px] font-semibold text-white text-left inline w-[500px] leading-[50px]">
+      <footer className="flex flex-row max-md:flex-col md:space-x-[70px] pl-[100px] max-md:pl-[30px] pb-[40px] pt-[30px]">
+        <div className="md:flex md:flex-col md:space-y-[30px] max-md:grid max-md:grid-cols-2">
+          <div className="flex flex-col max-md:space-y-[10px]">
+            <h1 className="text-[20px] font-semibold max-md:text-[9px] text-white text-left inline w-[500px] md:leading-[50px]">
               Farmers2Global Advance
             </h1>
-            <p className=" text-[12px] w-[450px] text-white text-left">
+            <p className=" text-[12px] w-[450px] max-md:w-[140px] text-white text-left max-md:text-[7px]">
               Discover the cutting-edge World of agriculture where technology
               meets sustainability. Our mission is to revolutionilize farming
               for a brighter tomorrow
             </p>
           </div>
-          <div className="flex flex-row space-x-[70px]">
+          <div className="flex flex-row max-md:flex-col md:space-x-[70px] max-md:space-y-[15px]">
             <div className="flex flex-row space-x-[10px] items-center">
-              <BiPhoneCall className="bg-gray-700 p-[7px] shadow-md text-[30px] rounded-full text-white" />
+              <BiPhoneCall className="bg-gray-700 p-[7px] shadow-md text-[30px] max-md:p-[3px] max-md:text-[20px] rounded-full text-white" />
               <div className="flex flex-col items-start">
-                <p className="text-[10px] text-gray-400">Have a question ?</p>
-                <p className="font-semibold text-[12px] text-white">
+                <p className="text-[10px] text-gray-400 max-md:text-[7px]">
+                  Have a question ?
+                </p>
+                <p className="font-semibold text-[12px] max-md:text-[7px] text-white">
                   +(250)78-225-6907
                 </p>
               </div>
             </div>
             <div className="flex flex-row space-x-[10px] items-center">
-              <MdOutlineMailOutline className="bg-gray-700 p-[7px] shadow-md text-[30px] rounded-full text-white" />
+              <MdOutlineMailOutline className="bg-gray-700 p-[7px] shadow-md text-[30px] max-md:p-[3px] max-md:text-[20px] rounded-full text-white" />
               <div className="flex flex-col items-start">
-                <p className="text-[10px] text-gray-400">Contact us at ?</p>
-                <p className="font-semibold text-[12px] text-white">
+                <p className="text-[10px] text-gray-400 max-md:text-[7px]">
+                  Contact us at ?
+                </p>
+                <p className="font-semibold text-[12px] max-md:text-[7px] text-white">
                   farmz2global@gmail.com
                 </p>
               </div>
             </div>
           </div>
-          <div className="flex flex-row pt-[20px] space-x-[30px] text-[12px] text-gray-400">
+          <div className="flex flex-row pt-[20px] space-x-[30px] text-[12px] max-md:text-[7px] max-md:hidden text-gray-400">
             <a href="#">About</a>
             <a href="#">Contact</a>
 
@@ -375,15 +399,17 @@ const Homepage = () => {
             <a href="#">Terms of use</a>
           </div>
         </div>
-        <div className="flex flex-col space-y-[20px] mt-[16px]">
+        <div className="md:flex md:flex-col max-md:grid max-md:grid-cols-2 space-y-[20px] mt-[16px]">
           <div className="flex flex-col space-y-[12px] items-start">
-            <h1 className="font-semibold text-[15px] text-white">Newsletter</h1>
-            <p className="text-[10px] text-gray-400 text-left w-[400px]">
+            <h1 className="font-semibold text-[15px] max-md:text-[10px] text-white">
+              Newsletter
+            </h1>
+            <p className="text-[10px] text-gray-400 text-left max-md:text-[7px] max-md:w-[140px] w-[400px]">
               Be the first one to know about discounts , offers and events ,
               Unsubscribe whenever you like
             </p>
           </div>
-          <div className="bg-gray-700 items-center  relative w-[450px] h-[42px] rounded-full flex flex-row p-0">
+          <div className="bg-gray-700 items-center max-md:hidden relative w-[450px] max-md:w-[200px] h-[42px] rounded-full flex flex-row p-0">
             <label htmlFor="email" className="absolute top-[12px] left-[7px]">
               <MdOutlineMailOutline className="text-gray-500 text-[18px]" />
             </label>
@@ -398,16 +424,16 @@ const Homepage = () => {
             </button>
           </div>
           <div className="flex flex-row space-x-[30px]">
-            <p className="font-semibold text-[13px] mt-[5px] text-white">
+            <p className="font-semibold text-[13px] mt-[5px] max-md:text-[7px] text-white">
               Follow us on social media
             </p>
             <div className="flex flex-col space-y-[20px]">
               <div className="flex flex-row space-x-[9px]">
-                <TbBrandFacebook className="bg-gray-700 p-[7px] shadow-md text-[30px] rounded-full text-white" />
-                <PiWhatsappLogoLight className="bg-gray-700 p-[7px] shadow-md text-[30px] rounded-full text-white" />
-                <RiTwitterXFill className="bg-gray-700 p-[7px] shadow-md text-[30px] rounded-full text-white" />
+                <TbBrandFacebook className="bg-gray-700 p-[7px] shadow-md text-[30px] max-md:p-[3px] max-md:text-[20px] rounded-full text-white" />
+                <PiWhatsappLogoLight className="bg-gray-700 p-[7px] shadow-md text-[30px] max-md:p-[3px] max-md:text-[20px] rounded-full text-white" />
+                <RiTwitterXFill className="bg-gray-700 p-[7px] shadow-md text-[30px] max-md:p-[3px] max-md:text-[20px] rounded-full text-white" />
               </div>
-              <div className="text-[10px] text-gray-400 text-left flex flex-row items-center space-x-2 pt-[10px]">
+              <div className="text-[10px] max-md:text-[7px] text-gray-400 text-left flex flex-row items-center space-x-2 pt-[10px]">
                 <FaRegCopyright />
                 <p> 2024 , All rights reserved</p>
               </div>
