@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import leafImage from "../assets/leaf2.png";
 import { BsFillArrowUpRightCircleFill } from "react-icons/bs";
 import { HiOutlineLightBulb } from "react-icons/hi2";
@@ -52,6 +52,12 @@ const Homepage = () => {
       prevstate === 0 ? slides.length - 1 : prevstate - 1
     );
   };
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentState((prev) => (prev + 1) % slides.length);
+    }, 7000);
+    return () => clearInterval(interval);
+  }, [slides.length]);
   return (
     <div className="bg-[#102d11]">
       <nav className="bg-[#102d11] border-b-[1px] border-gray-400 mx-[50px] text-white py-4">
@@ -66,9 +72,9 @@ const Homepage = () => {
             }}
           />
           {navShow && (
-            <div className="flex flex-col space-y-[10px] w-[150px] rounded-[10px] right-[10px] absolute items-end z-10 border-[1px] border-gray-300 p-[16px] top-[40px] bg-[#102d11]">
+            <div className="flex pb-[20px] flex-col space-y-[10px] w-[160px] rounded-[10px] right-[10px] absolute items-end z-10 border-[1px] border-gray-300 p-[16px] top-[40px] bg-[#102d11]">
               <VscChromeClose
-                className="hover:bg-green-300"
+                className="hover:text-green-300"
                 onClick={() => {
                   setNavShow(false);
                 }}
@@ -81,17 +87,22 @@ const Homepage = () => {
                 </li>
                 <li>
                   <a href="#" className="hover:text-green-300">
-                    Technology
+                    Services
                   </a>
                 </li>
                 <li>
                   <a href="#" className="hover:text-green-300">
-                    Sustainability
+                    Partners
                   </a>
                 </li>
                 <li>
                   <a href="#" className="hover:text-green-300">
-                    Contact
+                    Contact us
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-green-300">
+                    Crops Cartegories
                   </a>
                 </li>
               </ul>
@@ -105,17 +116,22 @@ const Homepage = () => {
             </li>
             <li>
               <a href="#" className="hover:text-green-300">
-                Technology
+                Services
               </a>
             </li>
             <li>
               <a href="#" className="hover:text-green-300">
-                Sustainability
+                Partners
               </a>
             </li>
             <li>
               <a href="#" className="hover:text-green-300">
-                Contact
+                Contact us
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:text-green-300">
+                Crops Cartegories
               </a>
             </li>
           </ul>
