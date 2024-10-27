@@ -163,7 +163,7 @@ const Homepage = () => {
             onClick={Next}
             className="absolute text-[#CBE86A] text-[30px] max-md:top-[90px] top-[190px] right-[10px] hover:cursor-pointer"
           />
-          <div className="absolute space-x-[17px] max-md:space-x-[14px]  bg-[#102d11] max-md:w-[250px] max-md:h-[100px] w-[330px] h-[150px] bottom-[10px] max-md:bottom-[10px] left-[170px] max-sm:left-[120px] items-center flex flex-row pl-[10px] rounded-[15px]">
+          <div className="absolute space-x-[17px] max-md:space-x-[14px]  bg-[#102d11] max-md:w-[250px] max-md:h-[100px] w-[330px] h-[150px] bottom-[10px] max-md:bottom-[10px] left-[170px] max-sm:left-[70px] items-center flex flex-row pl-[10px] rounded-[15px]">
             <div className="bg-[#CBE86A] w-[4px] h-[120px] max-md:h-[75px] max-md:w-[2px] rounded-full"></div>
             <div className="flex flex-col">
               <h2 className="font-bold text-white max-md:text-[14px] text-[20px]">
@@ -180,7 +180,7 @@ const Homepage = () => {
           </div>
         </div>
         <div className="bg-[#CBE86A] px-4 w-full flex flex-col space-y-[40px] pl-[60px] max-md:pl-0 items-start max-md:items-center">
-          <h2 className="text-[25px] font-semibold text-center mt-[30px] max-sm:text-[17px] max-md:mt-[20px]">
+          <h2 className="text-[25px] font-semibold text-center mt-[30px] max-md:text-[17px] max-md:mt-[20px]">
             Modern and Futuristic Benefits
           </h2>
           <div className="flex flex-col text-center space-y-[30px]">
@@ -228,14 +228,14 @@ const Homepage = () => {
         </div>
       </section>
 
-      <section className="py-20">
-        <div className="flex flex-row space-x-[200px]">
-          <div className="flex flex-col space-y-[70px] pl-[150px]">
+      <section className="py-20 max-md:py-[30px]">
+        <div className="flex flex-row md:space-x-[200px] max-md:flex-col max-md:space-y-[30px]">
+          <div className="flex flex-col space-y-[70px] max-md:space-y-[35px] pl-[150px] max-md:pl-[60px]">
             <div className="flex flex-col space-y-[20px]">
-              <h1 className="text-[40px] text-white text-left inline w-[500px] leading-[50px]">
+              <h1 className="text-[40px] text-white text-left inline w-[500px] leading-[50px] max-md:text-[17px]">
                 Enable Local Farmers Go Global
               </h1>
-              <p className=" text-[14px] w-[500px] text-white text-left mt-[50px]">
+              <p className=" text-[14px] w-[500px] max-md:w-[300px] text-white text-left mt-[50px] max-md:text-[10px]">
                 By leveraging various existing Digital Technologies, Farm2Global
                 is a game changer verified platform within agri-sector supply
                 chain. It enhances trust and credibility within the agricultural
@@ -246,50 +246,50 @@ const Homepage = () => {
               </p>
             </div>
             <div className="flex-col space-y-[20px] flex">
-              <div className="flex flex-row w-[430px] items-center justify-start border-[#CBE86A] border-b-[1px]">
-                <div className="flex flex-row space-x-[10px]">
-                  <MdStars className="text-[#CBE86A] w-[24px] h-[24px]" />
-                  <h1 className="font-semibold text-[17px] text-white">
+              <div className="flex flex-row w-[430px] max-md:w-[260px] items-center justify-start border-[#CBE86A] border-b-[1px]">
+                <div className="flex flex-row space-x-[10px] ">
+                  <MdStars className="text-[#CBE86A] w-[24px] h-[24px] max-md:w-[20px] max-md:h-[20px]" />
+                  <h1 className="font-semibold text-[17px] text-white max-md:text-[12px]">
                     Our customers
                   </h1>
                 </div>
-                <p className="font-bold text-white text-[30px] ml-[150px]">
+                <p className="font-bold text-white text-[30px] ml-[150px] max-md:ml-[70px] max-md:text-[20px]">
                   1230
                 </p>
               </div>
-              <div className="flex flex-row w-[430px] items-center justify-start border-[#CBE86A] border-b-[1px]">
+              <div className="flex flex-row w-[430px] max-md:w-[260px] items-center justify-start border-[#CBE86A] border-b-[1px]">
                 <div className="flex flex-row space-x-[10px]">
-                  <IoIosPeople className="text-[#CBE86A] w-[24px] h-[24px]" />
-                  <h1 className="font-semibold text-[17px] text-white">
+                  <IoIosPeople className="text-[#CBE86A] w-[24px] h-[24px] max-md:w-[20px] max-md:h-[20px]" />
+                  <h1 className="font-semibold text-[17px] text-white max-md:text-[12px]">
                     Farmers Cooperatives
                   </h1>
                 </div>
-                <p className="font-bold text-white text-[30px]  ml-[85px]">
+                <p className="font-bold text-white text-[30px]  ml-[85px] max-md:ml-[30px] max-md:text-[20px]">
                   994
                 </p>
               </div>
-              <div className="flex flex-row w-[430px] items-center justify-start border-[#CBE86A] border-b-[1px]">
+              <div className="flex flex-row w-[430px] max-md:w-[260px] items-center justify-start border-[#CBE86A] border-b-[1px]">
                 <div className="flex flex-row space-x-[10px]">
-                  <BiSolidHappyAlt className="text-[#CBE86A] w-[24px] h-[24px]" />
-                  <h1 className="font-semibold text-[17px] text-white">
+                  <BiSolidHappyAlt className="text-[#CBE86A] w-[24px] h-[24px] max-md:h-[20px] max-md:w-[20px]" />
+                  <h1 className="font-semibold text-[17px] text-white max-md:text-[12px]">
                     Happy Clients{" "}
                   </h1>
                 </div>
-                <p className="font-bold text-white text-[30px]  ml-[155px]">
+                <p className="font-bold text-white text-[30px]  ml-[155px] max-md:ml-[82px] max-md:text-[20px]">
                   932
                 </p>
               </div>
             </div>
           </div>
-          <div className="flex flex-col space-y-[70px] items-center justify-center">
-            <div className="flex flex-row space-x-[24px] items-center justify-center">
-              <div className="bg-[#CBE86A] w-[4px] h-[220px] rounded-full"></div>
+          <div className="flex flex-col max-md:flex-row md:space-y-[70px] max-md:space-x-[30px] items-center max-md:w-full justify-center">
+            <div className="flex flex-row space-x-[24px] max-md:space-x-[10px] items-center justify-center">
+              <div className="bg-[#CBE86A] w-[4px] h-[220px] max-md:h-[170px] max-md:w-[2px] rounded-full"></div>
               <div className="flex flex-col items-center justify-center">
-                <GiThreeLeaves className="w-[80px] h-[80px] text-white" />
-                <h1 className="font-bold text-white text-[15px]">
+                <GiThreeLeaves className="w-[80px] h-[80px] text-white max-md:w-[40px] max-md:h-[40px]" />
+                <h1 className="font-bold text-white text-[15px] max-md:text-[10px]">
                   100% Trusted Farmers
                 </h1>
-                <p className=" text-[12px] w-[200px] text-white text-left mt-[10px]">
+                <p className=" text-[12px] w-[200px] max-md:w-[120px] text-white max-md:text-[9px] text-left mt-[10px]">
                   Farmers registration process involved multiple steps including
                   Unique Digital ID issuance, Personal,Business and
                   Administrative documents verification and onsite visit to
@@ -297,14 +297,14 @@ const Homepage = () => {
                 </p>
               </div>
             </div>
-            <div className="flex flex-row space-x-[24px] items-center justify-center">
-              <div className="bg-[#CBE86A] w-[4px] h-[220px] rounded-full"></div>
+            <div className="flex flex-row space-x-[24px] max-md:space-x-[10px] items-center justify-center">
+              <div className="bg-[#CBE86A] w-[4px] h-[220px] max-md:h-[170px] max-md:w-[2px] rounded-full"></div>
               <div className="flex flex-col items-center justify-center">
-                <PiMedalLight className="w-[80px] h-[80px] text-white" />
-                <h1 className="font-bold text-white text-[15px]">
+                <PiMedalLight className="w-[80px] h-[80px] text-white max-md:w-[40px] max-md:h-[40px]" />
+                <h1 className="font-bold text-white text-[15px]  max-md:text-[10px]">
                   Awards and Recognition
                 </h1>
-                <p className=" text-[12px] w-[200px] text-white text-left mt-[10px]">
+                <p className=" text-[12px] w-[200px] max-md:w-[120px] text-white text-left mt-[10px] max-md:text-[9px]">
                   We have won various awards such as Digital ID For Africa where
                   we leveraged Digital ID to enhance digitization of Agriculture
                   sector. In addition, we are legally recognized by MINAGRI, RDB
