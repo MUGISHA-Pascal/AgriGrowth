@@ -108,7 +108,7 @@ const Homepage = () => {
               </ul>
             </div>
           )}
-          <ul className="flex space-x-6 max-md:hidden font-normal text-gray-300">
+          <ul className="flex space-x-6 max-md:hidden font-normal text-gray-300 text-[14px]">
             <li>
               <a href="#" className="hover:text-green-300">
                 About Us
