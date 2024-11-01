@@ -22,6 +22,7 @@ import monsalwa from "../assets/monsalwa.png";
 import azam from "../assets/azam.png";
 import africa from "../assets/africa.png";
 import adma from "../assets/adma.png";
+import { motion } from "framer-motion";
 import coffee from "../assets/coffee.png";
 import cotton from "../assets/cotton.png";
 import fruits from "../assets/fruits.png";
@@ -63,7 +64,7 @@ const Homepage = () => {
       <nav className="bg-[#102d11] border-b-[1px] border-gray-400 mx-[50px] text-white py-4">
         <div className="container max-md:px-[10px] mx-auto  px-[70px] pt-[20px] flex justify-between items-center">
           <div className="text-2xl max-sm:text-[13px] max-md:text-[15px] max-md:font-bold font-semi-bold text-white">
-            Farmers2Global
+            AgriGrowth
           </div>
           <CiMenuBurger
             className="max-md:flex hidden"
@@ -141,21 +142,35 @@ const Homepage = () => {
       <section className="bg-[#102d11] flex flex-row  text-white">
         <div className="container mx-auto px-4 pt-20 max-md:pt-[40px] text-center">
           <div className="flex pl-[90px] max-md:pl-[20px]">
-            <h1 className="text-[60px] text-left inline w-[700px] max-md:w-[300px] max-md:text-[30px]">
+            <motion.h1
+              initial={{ x: "-200px" }}
+              animate={{ x: "0px" }}
+              className="text-[60px] text-left inline w-[700px] max-md:w-[300px] max-md:text-[30px]"
+            >
               Welcome to the Future of Agriculture
-            </h1>
-            <button className="text-gray-300 max-md:text-[10px] w-[140px] space-x-[10px] items-center mt-[60px] flex flex-row">
+            </motion.h1>
+            <motion.button
+              initial={{ x: "200px" }}
+              animate={{ x: "0px" }}
+              className="text-gray-300 max-md:text-[10px] w-[140px] space-x-[10px] items-center mt-[60px] flex flex-row"
+            >
               <p>Learn more</p>
               <BsFillArrowUpRightCircleFill className="w-[30px] hover:opacity-60 h-[30px] max-md:w-[20px] max-md:h-[20px] text-[#CBE86A]" />
-            </button>
+            </motion.button>
           </div>
           <div className="flex flex-row ml-[100px] max-sm:space-x-[50px] max-md:space-x-[120px] max-md:ml-[20px] space-x-[250px]">
-            <p className=" text-[14px] max-md:text-[10px] max-md:w-[300px] w-[500px] text-left max-md:mt-[30px] mt-[50px]">
+            <motion.p
+              initial={{ x: "-200px" }}
+              animate={{ x: "0px" }}
+              className=" text-[14px] max-md:text-[10px] max-md:w-[300px] w-[500px] text-left max-md:mt-[30px] mt-[50px]"
+            >
               Discover the cutting-edge world of agriculture where technology
               meets sustainability.Our mission is to revolutionilize farming for
               a brighter tomorrow.
-            </p>
-            <img
+            </motion.p>
+            <motion.img
+              initial={{ opacity: 0.34 }}
+              animate={{ opacity: 1 }}
               src={leafImage}
               alt="leaf"
               className="w-[300px] h-[180px] mt-[30px] max-sm:mt-[80px] max-md:h-[75px] max-md:w-[130px] max-sm:w-[100px] max-sm:h-[55px]"
@@ -165,11 +180,11 @@ const Homepage = () => {
       </section>
 
       <section className="bg-[#CBE86A] flex flex-row max-md:flex-col max-md:pb-[10px]">
-        <div className="h-[480px] w-[1400px] max-md:w-full max-md:h-[300px] relative">
+        <div className="h-[480px] w-full max-md:w-full max-md:h-[300px] relative">
           <img
             alt="image"
             src={slides[currentState].image}
-            className={`h-[480px] w-[700px] max-md:h-[300px] absolute bg-url(${slides[currentState].image})`}
+            className={`h-[480px] w-[900px] max-md:h-[300px] absolute bg-url(${slides[currentState].image})`}
           />
           <GrPrevious
             onClick={Previous}
@@ -183,7 +198,7 @@ const Homepage = () => {
             <div className="bg-[#CBE86A] w-[4px] h-[120px] max-md:h-[75px] max-md:w-[2px] rounded-full"></div>
             <div className="flex flex-col">
               <h2 className="font-bold text-white max-md:text-[14px] text-[20px]">
-                Farmers2Global
+                AgriGrowth
               </h2>
               <h2 className="font-bold text-white text-[15px] max-md:text-[12px]">
                 {slides[currentState].name}
@@ -372,7 +387,7 @@ const Homepage = () => {
         <div className="md:flex md:flex-col md:space-y-[30px] max-md:grid max-md:grid-cols-2">
           <div className="flex flex-col max-md:space-y-[10px]">
             <h1 className="text-[20px] font-semibold max-md:text-[9px] text-white text-left inline w-[500px] md:leading-[50px]">
-              Farmers2Global Advance
+              AgriGrowth Advance
             </h1>
             <p className=" text-[12px] w-[450px] max-md:w-[140px] text-white text-left max-md:text-[7px]">
               Discover the cutting-edge World of agriculture where technology
