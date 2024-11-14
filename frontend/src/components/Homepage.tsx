@@ -79,7 +79,7 @@ const Homepage = () => {
       <nav className="bg-[#102d11] border-b-[1px] border-gray-400 mx-[50px] text-white py-4">
         <div className="container max-md:px-[10px] mx-auto  px-[70px] pt-[20px] flex justify-between items-center">
           <div className="text-2xl max-sm:text-[13px] max-md:text-[15px] max-md:font-bold font-semi-bold text-white">
-            AgriGrowth
+            AgriGrowth.
           </div>
           <CiMenuBurger
             className="max-md:flex hidden"
