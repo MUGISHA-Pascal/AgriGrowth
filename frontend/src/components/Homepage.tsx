@@ -18,6 +18,8 @@ import { BiSolidHappyAlt } from "react-icons/bi";
 import { FaRegCopyright } from "react-icons/fa6";
 import minimex from "../assets/minimex.png";
 import { GrPrevious } from "react-icons/gr";
+import { MdOutlineKeyboardDoubleArrowUp } from "react-icons/md";
+import { animateScroll as scroll } from "react-scroll";
 import monsalwa from "../assets/monsalwa.png";
 import azam from "../assets/azam.png";
 import africa from "../assets/africa.png";
@@ -59,8 +61,21 @@ const Homepage = () => {
     }, 7000);
     return () => clearInterval(interval);
   }, [slides.length]);
+
+  const scrolltoTop = () => {
+    scroll.scrollToTop({
+      duration: 500,
+      smooth: "easeInOutQuad",
+    });
+  };
   return (
     <div className="bg-[#102d11]">
+      <div
+        className="bg-green-900 fixed max-md:right-[20px] max-md:bottom-[20px] bottom-[70px] rounded-full p-[10px] z-30 right-[70px]"
+        onClick={scrolltoTop}
+      >
+        <MdOutlineKeyboardDoubleArrowUp className="text-white" />
+      </div>
       <nav className="bg-[#102d11] border-b-[1px] border-gray-400 mx-[50px] text-white py-4">
         <div className="container max-md:px-[10px] mx-auto  px-[70px] pt-[20px] flex justify-between items-center">
           <div className="text-2xl max-sm:text-[13px] max-md:text-[15px] max-md:font-bold font-semi-bold text-white">
@@ -263,9 +278,13 @@ const Homepage = () => {
         <div className="flex flex-row md:space-x-[200px] max-md:flex-col max-md:space-y-[30px]">
           <div className="flex flex-col space-y-[70px] max-md:space-y-[35px] pl-[150px] max-md:pl-[60px]">
             <div className="flex flex-col space-y-[20px]">
-              <h1 className="text-[40px] text-white text-left inline w-[500px] leading-[50px] max-md:text-[17px]">
+              <motion.h1
+                initial={{ x: "200px" }}
+                animate={{ x: "0px" }}
+                className="text-[40px] text-white text-left inline w-[500px] leading-[50px] max-md:text-[17px]"
+              >
                 Enable Local Farmers Go Global
-              </h1>
+              </motion.h1>
               <p className=" text-[14px] w-[500px] max-md:w-[300px] text-white text-left mt-[50px] max-md:text-[10px]">
                 By leveraging various existing Digital Technologies, Farm2Global
                 is a game changer verified platform within agri-sector supply
